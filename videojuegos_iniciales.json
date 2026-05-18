@@ -1,0 +1,20 @@
+{
+    "VG001": {
+        "nombre": "FIFA 26",
+        "plataforma": "PlayStation 5",
+        "precio": 250000,
+        "cantidad": 10
+    },
+    "VG002": {
+        "nombre": "Zelda: Breath of the Wild",
+        "plataforma": "Nintendo Switch",
+        "precio": 220000,
+        "cantidad": 5
+    },
+    "VG003": {
+        "nombre": "Forza Horizon 5",
+        "plataforma": "Xbox Series X",
+        "precio": 210000,
+        "cantidad": 8
+    }
+}
