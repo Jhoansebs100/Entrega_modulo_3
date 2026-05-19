@@ -9,7 +9,7 @@
         "nombre": "Zelda: Breath of the Wild",
         "plataforma": "Nintendo Switch",
         "precio": 220000,
-        "cantidad": 5
+        "cantidad": 1
     },
     "VG003": {
         "nombre": "Forza Horizon 5",
@@ -20,7 +20,7 @@
     "VG005": {
         "nombre": "Pokemon united",
         "plataforma": "Nintendo",
-        "precio": 345000.0,
+        "precio": 45000.0,
         "cantidad": 5
     },
     "VG004": {

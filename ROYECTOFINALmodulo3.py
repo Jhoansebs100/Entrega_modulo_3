@@ -239,5 +239,4 @@ videojuegos_iniciales = json.dumps(videojuegos_iniciales, indent=4)
 with open("videojuegos_iniciales.json", "w") as file:
     file.write(videojuegos_iniciales)
 
-#Función para limpiar la salida
 
