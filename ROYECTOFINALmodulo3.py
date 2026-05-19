@@ -1,27 +1,6 @@
 import json
 
 
-videojuegos_iniciales = {
-    "VG001": {
-        "nombre": "FIFA 26",
-        "plataforma": "PlayStation 5",
-        "precio": 250000,
-        "cantidad": 10
-    },
-    "VG002": {
-        "nombre": "Zelda: Breath of the Wild",
-        "plataforma": "Nintendo Switch",
-        "precio": 220000,
-        "cantidad": 5
-    },
-    "VG003": {
-        "nombre": "Forza Horizon 5",
-        "plataforma": "Xbox Series X",
-        "precio": 210000,
-        "cantidad": 8
-    }
-}
-
 # Cargar el inventario desde el archivo JSON al iniciar el programa
 def cargar_inventario_desde_json():
     try:
@@ -34,7 +13,7 @@ def cargar_inventario_desde_json():
         print("Error al decodificar el archivo JSON. Iniciando con inventario vacío.")
         return {}
 
-
+videojuegos_iniciales = cargar_inventario_desde_json()
 
 # Función para mostrar el menú principal y manejar la navegación entre opciones
 def menu():
@@ -250,15 +229,15 @@ def eliminar_videojuego(videojuegos):
 # -----------------------------------------------------------------------------
 # 9. EJEMPLOS DE EJECUCIÓN
 # -----------------------------------------------------------------------------
-cargar_inventario_desde_json()
+
 menu()
 
 
 # para guardar el inventario en un archivo JSON
 
-videojuegos_iniciales_json = json.dumps(videojuegos_iniciales, indent=4)
+videojuegos_iniciales = json.dumps(videojuegos_iniciales, indent=4)
 with open("videojuegos_iniciales.json", "w") as file:
-    file.write(videojuegos_iniciales_json)
+    file.write(videojuegos_iniciales)
 
-
+#Función para limpiar la salida
 

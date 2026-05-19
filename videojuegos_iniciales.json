@@ -22,5 +22,11 @@
         "plataforma": "Nintendo",
         "precio": 345000.0,
         "cantidad": 5
+    },
+    "VG004": {
+        "nombre": "Palworld",
+        "plataforma": "Steam",
+        "precio": 85500.0,
+        "cantidad": 3
     }
 }
