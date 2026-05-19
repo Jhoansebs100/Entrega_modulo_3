@@ -496,5 +496,4 @@ Tómate tu tiempo, planifica bien, y disfruta el proceso de creación.
 Si tienes dudas durante el desarrollo, no dudes en consultar con tu docente.
 
 ¡Mucho éxito! 🚀
-"""#   E n t r e g a _ m o d u l o _ 3  
- 
+""" """

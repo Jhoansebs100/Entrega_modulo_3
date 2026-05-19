@@ -24,6 +24,8 @@ import json
 videojuegos_iniciales_json = json.dumps(videojuegos_iniciales, indent=4)
 with open("videojuegos_iniciales.json", "w") as file:
     file.write(videojuegos_iniciales_json)
+
+
 # Cargar el inventario desde el archivo JSON al iniciar el programa
 def cargar_inventario_desde_json():
     try:
@@ -84,7 +86,7 @@ Seleccione una opción: """)
 # Función para agregar un nuevo videojuego al inventario con validaciones
 def agregar_videojuego(videojuegos):
     while True:
-        codigo = input("Ingrese el código del videojuego: ").strip()
+        codigo = input("Ingrese el código del videojuego: ").strip().upper()
         if codigo in videojuegos:
             print("Error: El código ya existe. Por favor ingrese un código único.")
             continue
@@ -94,14 +96,14 @@ def agregar_videojuego(videojuegos):
         break
 
     while True:
-        nombre = input("Ingrese el nombre del videojuego: ").strip()
+        nombre = input("Ingrese el nombre del videojuego: ").strip().capitalize()
         if not nombre:
             print("Error: El nombre no puede estar vacío.")
             continue
         break
 
     while True:
-        plataforma = input("Ingrese la plataforma del videojuego: ").strip()
+        plataforma = input("Ingrese la plataforma del videojuego: ").strip().capitalize()
         if not plataforma:
             print("Error: La plataforma no puede estar vacía.")
             continue
@@ -149,7 +151,7 @@ def mostrar_inventario(videojuegos):
 
 # Función para buscar un videojuego por código con validación
 def buscar_videojuego(videojuegos):
-    codigo = input("Ingrese el código del videojuego a buscar: ").strip()
+    codigo = input("Ingrese el código del videojuego a buscar: ").strip().upper()
     if codigo in videojuegos:
         info = videojuegos[codigo]
         print(f"Información del videojuego '{info['nombre']}':")
@@ -161,7 +163,7 @@ def buscar_videojuego(videojuegos):
 
 # Función para actualizar el precio de un videojuego con validación
 def actualizar_precio(videojuegos):
-    codigo = input("Ingrese el código del videojuego para actualizar el precio: ").strip()
+    codigo = input("Ingrese el código del videojuego para actualizar el precio: ").strip().upper()
     if codigo in videojuegos:
         while True:
             try:
@@ -180,7 +182,7 @@ def actualizar_precio(videojuegos):
 # Función para registrar una venta con validación de stock y descuento inteligente
 
 def registrar_venta(videojuegos):
-    codigo = input("Ingrese el código del videojuego a vender: ").strip()
+    codigo = input("Ingrese el código del videojuego a vender: ").strip().upper()
     if codigo in videojuegos:
         while True:
             try:
@@ -243,7 +245,7 @@ def mostrar_estadisticas(videojuegos):
 
 # Función para eliminar un videojuego del inventario
 def eliminar_videojuego(videojuegos):
-    codigo = input("Ingrese el código del videojuego a eliminar: ").strip()
+    codigo = input("Ingrese el código del videojuego a eliminar: ").strip().upper()
     if codigo in videojuegos:
         nombre_eliminado = videojuegos[codigo]['nombre']
         del videojuegos[codigo]
