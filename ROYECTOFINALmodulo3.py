@@ -1,3 +1,5 @@
+import json
+
 
 videojuegos_iniciales = {
     "VG001": {
@@ -19,12 +21,6 @@ videojuegos_iniciales = {
         "cantidad": 8
     }
 }
-# para guardar el inventario inicial en un archivo JSON
-import json
-videojuegos_iniciales_json = json.dumps(videojuegos_iniciales, indent=4)
-with open("videojuegos_iniciales.json", "w") as file:
-    file.write(videojuegos_iniciales_json)
-
 
 # Cargar el inventario desde el archivo JSON al iniciar el programa
 def cargar_inventario_desde_json():
@@ -37,13 +33,6 @@ def cargar_inventario_desde_json():
     except json.JSONDecodeError:
         print("Error al decodificar el archivo JSON. Iniciando con inventario vacío.")
         return {}
-
-cargar_inventario_desde_json()
-
-
-
-
-
 
 
 
@@ -137,7 +126,7 @@ def agregar_videojuego(videojuegos):
     }
     print(f"Videojuego '{nombre}' agregado exitosamente con código {codigo}.")
 
-# Función para mostrar el inventario completo con formato tabular
+# Función para mostrar el inventario completo con formato de tienda/tabla
 
 def mostrar_inventario(videojuegos):
     if not videojuegos:
@@ -200,7 +189,7 @@ def registrar_venta(videojuegos):
         precio_unitario = videojuegos[codigo]['precio']
         total_venta = precio_unitario * cantidad_vender
 
-        # Aplicar descuento inteligente
+        # Aplicar descuento
         if total_venta > 500000:
             descuento = total_venta * 0.10
             total_venta -= descuento
@@ -261,7 +250,15 @@ def eliminar_videojuego(videojuegos):
 # -----------------------------------------------------------------------------
 # 9. EJEMPLOS DE EJECUCIÓN
 # -----------------------------------------------------------------------------
-
+cargar_inventario_desde_json()
 menu()
+
+
+# para guardar el inventario en un archivo JSON
+
+videojuegos_iniciales_json = json.dumps(videojuegos_iniciales, indent=4)
+with open("videojuegos_iniciales.json", "w") as file:
+    file.write(videojuegos_iniciales_json)
+
 
 

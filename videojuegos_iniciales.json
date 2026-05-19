@@ -16,5 +16,11 @@
         "plataforma": "Xbox Series X",
         "precio": 210000,
         "cantidad": 8
+    },
+    "VG005": {
+        "nombre": "Pokemon united",
+        "plataforma": "Nintendo",
+        "precio": 345000.0,
+        "cantidad": 5
     }
 }
